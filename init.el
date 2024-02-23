@@ -43,7 +43,7 @@
 ;; 可选功能启用：
 ;; 启用 erase-buffer 函数。
 
-;C-e 执行emacs代码
+;C-x C-e 执行emacs代码
 ;C-h f查找函数
 ;C-h C-f
 ;C-h v搜索变量
@@ -106,7 +106,7 @@
 (add-hook 'after-init-hook 'benchmark-init/deactivate)
 
 ;;;增强min-buffer显示的内容，包含文件其他属性信息等
-;;;(package-install 'marginalia)
+;(package-install 'marginalia)
 (marginalia-mode t)
 ;;;
 
@@ -121,6 +121,11 @@
 (setq explicit-bash-args '("--noediting" "--login" "-i"))
 (setq tramp-verbose 10) ;; 如果你使用 TRAMP 模式连接远程主机的话，增加此行
 ;(setenv "TERM" "xterm-256color")
+
+;;; 高亮当前行
+(global-hl-line-mode 1)
+
+;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
